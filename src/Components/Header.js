@@ -1,13 +1,13 @@
-//import { Outlet } from "react-router-dom";
-
+import { Link } from "react-router-dom";
+//Link component doesn't reload the whole page, it only refreshes 
+//the components. 
 
 const Header = ()=>{
     return (
         <div className="header">
-            <h4>ZPHS GOPALAPURAM</h4>
-            <button>Login</button>
-            <button>Register</button>
-            
+            <Link to="/" style={{textDecoration:'none'}}><p>ZPHS GOPALAPURAM</p></Link>
+            <Link to="/login" style={{textDecoration:'none'}}><p>Login</p></Link>
+            <Link to="/register" style={{textDecoration:'none'}}><p>Register</p></Link> 
         </div>
     )
 };
