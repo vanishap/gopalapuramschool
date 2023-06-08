@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Header /> 
-      <HomePage />
+      <Outlet />
       <Footer />
     </div>
   );
@@ -22,15 +22,21 @@ export const appRouter = createBrowserRouter([
   path:"/",
   element: <App />,
   errorElement:<Error /> ,
-  },
-  {
+  children:[
+    {
+      path:"/",
+      element:<HomePage />
+    },
+    {
     path:"/login",
     element:<Login />
-  },
-  {
+    },
+    {
     path:"/register",
     element:<Register />
-  } 
+    } 
+  ]
+  }  
 ]);
 
 export default App;
