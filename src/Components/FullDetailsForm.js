@@ -58,6 +58,9 @@ const FullDetailsForm = () => {
             onChange={nameHandler}/>
         </div> */}
       </form>
+      <div>
+        <button type='submit'>Add</button>
+      </div>
     </div>
   )
 }
